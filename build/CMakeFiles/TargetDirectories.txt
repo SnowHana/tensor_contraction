@@ -1,0 +1,4 @@
+/home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/matrix.dir
+/home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/test_matrix.dir
+/home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/edit_cache.dir
+/home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/rebuild_cache.dir

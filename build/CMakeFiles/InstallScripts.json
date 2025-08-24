@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/daniel/cpp_projects/tensor_multiplier/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
