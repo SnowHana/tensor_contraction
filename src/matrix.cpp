@@ -4,20 +4,12 @@
 
 Matrix::Matrix(std::size_t r, std::size_t c, std::vector<int> flat)
 : rows_(r), cols_(c), data_(std::move(flat)) {
-    /**
-     * @brief 
-     * @param
-     */
     if (data_.size() != rows_ * cols_) {
         throw std::runtime_error("size mismatch");
     }
 }
 
 const int& Matrix::at(size_t i, size_t j) const{
-    /**
-     * @brief returns Matrix[i][j]
-     * 
-     */
     if (i < 0 || j < 0 || i >= rows() || j >= cols()) {
         throw std::out_of_range("Index out of range");
     }
@@ -25,10 +17,6 @@ const int& Matrix::at(size_t i, size_t j) const{
 }
 
 int& Matrix::at(size_t   i, size_t     j) {
-    /**
-     * @brief returns Matrix[i][j]
-     * 
-     */
     if (i < 0 || j < 0 || i >= rows() || j >= cols()) {
         throw std::out_of_range("Index out of range");
     }
