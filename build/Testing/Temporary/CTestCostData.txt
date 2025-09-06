@@ -1,0 +1,19 @@
+Matrix at() allows modifying entries 3 0.00170578
+Matrix single row (1x4) 3 0.00168998
+Matrix multiply with identity 3 0.00131111
+Matrix at() throws on out-of-range indices 3 0.00125443
+Matrix rectangular construction - 3x2 3 0.00134026
+MatrixCalculator rejects incompatible shapes 3 0.00106543
+Matrix single column (4x1) 3 0.000951724
+Matrix basic construction 3 0.00127245
+Matrix multiply: 2x3 * 3x2 (normal A*B) 3 0.00159205
+Matrix multiply: 1xN · Nx1 gives 1x1 (dot product) 3 0.00131941
+Matrix multiply with zeros 3 0.00183408
+Matrix chanigng entry 3 0.0011837
+Matrix rectangular construction - 2x3 3 0.0012405
+RowMajorLayout: rank mismatch throws 3 0.00118947
+RowMajorLayout: 1D degenerate case 3 0.00114343
+RowMajorLayout: 2D mapping 3 0.00101704
+RowMajorLayout: larger dims sanity check 3 0.00130091
+RowMajorLayout: stride construction for 3D 3 0.00115579
+---

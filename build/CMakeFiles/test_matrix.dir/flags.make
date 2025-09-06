@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/daniel/cpp_projects/tensor_multiplier/include
 
-CXX_FLAGS = --coverage -O0 -g -std=c++17 --coverage -O0
+CXX_FLAGS = -std=c++17
 

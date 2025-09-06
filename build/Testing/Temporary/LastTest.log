@@ -1,0 +1,363 @@
+Start testing: Sep 06 14:35 KST
+----------------------------------------------------------
+1/18 Testing: Matrix at() allows modifying entries
+1/18 Test: Matrix at() allows modifying entries
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix at() allows modifying entries"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix at() allows modifying entries" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix at() allows modifying entries"
+Randomness seeded to: 2728692565
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix at() allows modifying entries" end time: Sep 06 14:35 KST
+"Matrix at() allows modifying entries" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/18 Testing: Matrix single row (1x4)
+2/18 Test: Matrix single row (1x4)
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix single row (1x4)"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix single row (1x4)" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix single row (1x4)"
+Randomness seeded to: 1114969283
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix single row (1x4)" end time: Sep 06 14:35 KST
+"Matrix single row (1x4)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/18 Testing: Matrix multiply with identity
+3/18 Test: Matrix multiply with identity
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix multiply with identity"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix multiply with identity" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix multiply with identity"
+Randomness seeded to: 1297014719
+===============================================================================
+All tests passed (14 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix multiply with identity" end time: Sep 06 14:35 KST
+"Matrix multiply with identity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/18 Testing: Matrix at() throws on out-of-range indices
+4/18 Test: Matrix at() throws on out-of-range indices
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix at() throws on out-of-range indices"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix at() throws on out-of-range indices" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix at() throws on out-of-range indices"
+Randomness seeded to: 3537628713
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix at() throws on out-of-range indices" end time: Sep 06 14:35 KST
+"Matrix at() throws on out-of-range indices" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/18 Testing: Matrix rectangular construction - 3x2
+5/18 Test: Matrix rectangular construction - 3x2
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix rectangular construction - 3x2"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix rectangular construction - 3x2" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix rectangular construction - 3x2"
+Randomness seeded to: 773246428
+===============================================================================
+All tests passed (8 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix rectangular construction - 3x2" end time: Sep 06 14:35 KST
+"Matrix rectangular construction - 3x2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/18 Testing: MatrixCalculator rejects incompatible shapes
+6/18 Test: MatrixCalculator rejects incompatible shapes
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "MatrixCalculator rejects incompatible shapes"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"MatrixCalculator rejects incompatible shapes" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "MatrixCalculator rejects incompatible shapes"
+Randomness seeded to: 2578206048
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MatrixCalculator rejects incompatible shapes" end time: Sep 06 14:35 KST
+"MatrixCalculator rejects incompatible shapes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/18 Testing: Matrix single column (4x1)
+7/18 Test: Matrix single column (4x1)
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix single column (4x1)"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix single column (4x1)" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix single column (4x1)"
+Randomness seeded to: 1766713316
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix single column (4x1)" end time: Sep 06 14:35 KST
+"Matrix single column (4x1)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/18 Testing: Matrix basic construction
+8/18 Test: Matrix basic construction
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix basic construction"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix basic construction" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix basic construction"
+Randomness seeded to: 4266580388
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix basic construction" end time: Sep 06 14:35 KST
+"Matrix basic construction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/18 Testing: Matrix multiply: 2x3 * 3x2 (normal A*B)
+9/18 Test: Matrix multiply: 2x3 * 3x2 (normal A*B)
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix multiply: 2x3 * 3x2 (normal A*B)"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix multiply: 2x3 * 3x2 (normal A*B)" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix multiply: 2x3 * 3x2 (normal A*B)"
+Randomness seeded to: 2756551603
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix multiply: 2x3 * 3x2 (normal A*B)" end time: Sep 06 14:35 KST
+"Matrix multiply: 2x3 * 3x2 (normal A*B)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/18 Testing: Matrix multiply: 1xN · Nx1 gives 1x1 (dot product)
+10/18 Test: Matrix multiply: 1xN · Nx1 gives 1x1 (dot product)
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix multiply: 1xN · Nx1 gives 1x1 (dot product)"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix multiply: 1xN · Nx1 gives 1x1 (dot product)" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix multiply: 1xN · Nx1 gives 1x1 (dot product)"
+Randomness seeded to: 3780257280
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix multiply: 1xN · Nx1 gives 1x1 (dot product)" end time: Sep 06 14:35 KST
+"Matrix multiply: 1xN · Nx1 gives 1x1 (dot product)" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/18 Testing: Matrix multiply with zeros
+11/18 Test: Matrix multiply with zeros
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix multiply with zeros"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix multiply with zeros" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix multiply with zeros"
+Randomness seeded to: 675347895
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix multiply with zeros" end time: Sep 06 14:35 KST
+"Matrix multiply with zeros" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/18 Testing: Matrix chanigng entry
+12/18 Test: Matrix chanigng entry
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix chanigng entry"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix chanigng entry" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix chanigng entry"
+Randomness seeded to: 606358463
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix chanigng entry" end time: Sep 06 14:35 KST
+"Matrix chanigng entry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/18 Testing: Matrix rectangular construction - 2x3
+13/18 Test: Matrix rectangular construction - 2x3
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix" "Matrix rectangular construction - 2x3"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"Matrix rectangular construction - 2x3" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "Matrix rectangular construction - 2x3"
+Randomness seeded to: 546241419
+===============================================================================
+All tests passed (8 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix rectangular construction - 2x3" end time: Sep 06 14:35 KST
+"Matrix rectangular construction - 2x3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/18 Testing: RowMajorLayout: rank mismatch throws
+14/18 Test: RowMajorLayout: rank mismatch throws
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_rowmajor" "RowMajorLayout: rank mismatch throws"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"RowMajorLayout: rank mismatch throws" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "RowMajorLayout: rank mismatch throws"
+Randomness seeded to: 447898648
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RowMajorLayout: rank mismatch throws" end time: Sep 06 14:35 KST
+"RowMajorLayout: rank mismatch throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/18 Testing: RowMajorLayout: 1D degenerate case
+15/18 Test: RowMajorLayout: 1D degenerate case
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_rowmajor" "RowMajorLayout: 1D degenerate case"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"RowMajorLayout: 1D degenerate case" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "RowMajorLayout: 1D degenerate case"
+Randomness seeded to: 156073569
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RowMajorLayout: 1D degenerate case" end time: Sep 06 14:35 KST
+"RowMajorLayout: 1D degenerate case" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/18 Testing: RowMajorLayout: 2D mapping
+16/18 Test: RowMajorLayout: 2D mapping
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_rowmajor" "RowMajorLayout: 2D mapping"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"RowMajorLayout: 2D mapping" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "RowMajorLayout: 2D mapping"
+Randomness seeded to: 3703336265
+===============================================================================
+All tests passed (5 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RowMajorLayout: 2D mapping" end time: Sep 06 14:35 KST
+"RowMajorLayout: 2D mapping" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/18 Testing: RowMajorLayout: larger dims sanity check
+17/18 Test: RowMajorLayout: larger dims sanity check
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_rowmajor" "RowMajorLayout: larger dims sanity check"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"RowMajorLayout: larger dims sanity check" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "RowMajorLayout: larger dims sanity check"
+Randomness seeded to: 1126358865
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RowMajorLayout: larger dims sanity check" end time: Sep 06 14:35 KST
+"RowMajorLayout: larger dims sanity check" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/18 Testing: RowMajorLayout: stride construction for 3D
+18/18 Test: RowMajorLayout: stride construction for 3D
+Command: "/home/daniel/cpp_projects/tensor_multiplier/build/test_rowmajor" "RowMajorLayout: stride construction for 3D"
+Directory: /home/daniel/cpp_projects/tensor_multiplier/build
+"RowMajorLayout: stride construction for 3D" start time: Sep 06 14:35 KST
+Output:
+----------------------------------------------------------
+Filters: "RowMajorLayout: stride construction for 3D"
+Randomness seeded to: 2965577509
+===============================================================================
+All tests passed (7 assertions in 1 test case)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RowMajorLayout: stride construction for 3D" end time: Sep 06 14:35 KST
+"RowMajorLayout: stride construction for 3D" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 06 14:35 KST

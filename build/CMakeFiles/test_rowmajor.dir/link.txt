@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/test_rowmajor.dir/link.d CMakeFiles/test_rowmajor.dir/tests/test_rowmajor.cpp.o -o test_rowmajor  libmatrix.a /usr/lib/libCatch2Main.a /usr/lib/libCatch2.a

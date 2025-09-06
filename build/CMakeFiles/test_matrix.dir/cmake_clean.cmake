@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_matrix.dir/tests/test_matrix.cpp.o"
   "CMakeFiles/test_matrix.dir/tests/test_matrix.cpp.o.d"
   "test_matrix"
+  "test_matrix-b12d07c_tests.cmake"
   "test_matrix.pdb"
 )
 

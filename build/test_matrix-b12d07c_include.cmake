@@ -1,0 +1,5 @@
+if(EXISTS "/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix-b12d07c_tests.cmake")
+  include("/home/daniel/cpp_projects/tensor_multiplier/build/test_matrix-b12d07c_tests.cmake")
+else()
+  add_test(test_matrix_NOT_BUILT-b12d07c test_matrix_NOT_BUILT-b12d07c)
+endif()

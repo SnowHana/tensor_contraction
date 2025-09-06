@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/daniel/cpp_projects/tensor_multiplier/src/matrix.cpp" "CMakeFiles/matrix.dir/src/matrix.cpp.o" "gcc" "CMakeFiles/matrix.dir/src/matrix.cpp.o.d"
+  "/home/daniel/cpp_projects/tensor_multiplier/src/rowmajor.cpp" "CMakeFiles/matrix.dir/src/rowmajor.cpp.o" "gcc" "CMakeFiles/matrix.dir/src/rowmajor.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
