@@ -14,7 +14,7 @@ class RowMajorLayout {
         const std::size_t strides(std::size_t k) const;
 
         // coordinates -> 1D index i
-        const size_t toFlat(const std::vector<std::size_t>&) const;
+        size_t toFlat(const std::vector<std::size_t>&) const;
     private:
         // Attr.
         std::vector<std::size_t> dims_{};

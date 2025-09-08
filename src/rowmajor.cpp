@@ -18,8 +18,10 @@ const std::vector<std::size_t>& RowMajorLayout::dims() const noexcept { return d
 const std::vector<std::size_t>& RowMajorLayout::strides() const noexcept { return strides_; }
 
 
-const size_t RowMajorLayout::toFlat(const std::vector<std::size_t>& coordinates) const {
+size_t RowMajorLayout::toFlat(const std::vector<std::size_t>& coordinates) const {
     // coordinates (x1, x2, x3 , ... xn) => i (Index in flat vector)
+    
+    // Error check : Mismatch dimension length (i.e. : N dimensional vs N - 1 dimensional)
     if (coordinates.size() != dims().size() || coordinates.size() != strides().size()) {
         throw std::runtime_error("Dimension mismatch!");
     }
@@ -27,6 +29,10 @@ const size_t RowMajorLayout::toFlat(const std::vector<std::size_t>& coordinates)
     size_t res = 0;
 
     for (size_t i = 0; i < strides().size(); ++i) {
+        // Check...
+        if (coordinates[i] >= dims(i)) {
+            throw std::out_of_range("Invalid index!");
+        }
         res += strides()[i] * coordinates[i];
     }
 
@@ -43,13 +49,13 @@ std::size_t RowMajorLayout::size() const noexcept {
 }  
 const std::size_t RowMajorLayout::dims(std::size_t k) const {
     if (k < 0 ||  k >= dims().size()) {
-        throw std::runtime_error("Invalid index!");
+        throw std::out_of_range("Invalid index!");
     } 
     return dims_[k];
 }
 const std::size_t RowMajorLayout::strides(std::size_t k) const { 
     if (k < 0 ||  k >= dims().size()) {
-        throw std::runtime_error("Invalid index!");
+        throw std::out_of_range("Invalid index!");
     } 
     return strides_[k];
 }
