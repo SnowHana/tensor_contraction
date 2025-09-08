@@ -29,6 +29,7 @@
 /home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/ContinuousSubmit.dir
 /home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/test_matrix.dir
 /home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/test_rowmajor.dir
+/home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/test_tensor.dir
 /home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/test.dir
 /home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/edit_cache.dir
 /home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles/rebuild_cache.dir

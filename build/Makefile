@@ -529,6 +529,19 @@ test_rowmajor/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_rowmajor.dir/build.make CMakeFiles/test_rowmajor.dir/build
 .PHONY : test_rowmajor/fast
 
+#=============================================================================
+# Target rules for targets named test_tensor
+
+# Build rule for target.
+test_tensor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_tensor
+.PHONY : test_tensor
+
+# fast build rule for target.
+test_tensor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tensor.dir/build.make CMakeFiles/test_tensor.dir/build
+.PHONY : test_tensor/fast
+
 src/matrix.o: src/matrix.cpp.o
 .PHONY : src/matrix.o
 
@@ -576,6 +589,30 @@ src/rowmajor.s: src/rowmajor.cpp.s
 src/rowmajor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix.dir/build.make CMakeFiles/matrix.dir/src/rowmajor.cpp.s
 .PHONY : src/rowmajor.cpp.s
+
+src/tensor.o: src/tensor.cpp.o
+.PHONY : src/tensor.o
+
+# target to build an object file
+src/tensor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix.dir/build.make CMakeFiles/matrix.dir/src/tensor.cpp.o
+.PHONY : src/tensor.cpp.o
+
+src/tensor.i: src/tensor.cpp.i
+.PHONY : src/tensor.i
+
+# target to preprocess a source file
+src/tensor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix.dir/build.make CMakeFiles/matrix.dir/src/tensor.cpp.i
+.PHONY : src/tensor.cpp.i
+
+src/tensor.s: src/tensor.cpp.s
+.PHONY : src/tensor.s
+
+# target to generate assembly for a file
+src/tensor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix.dir/build.make CMakeFiles/matrix.dir/src/tensor.cpp.s
+.PHONY : src/tensor.cpp.s
 
 tests/test_matrix.o: tests/test_matrix.cpp.o
 .PHONY : tests/test_matrix.o
@@ -625,6 +662,30 @@ tests/test_rowmajor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_rowmajor.dir/build.make CMakeFiles/test_rowmajor.dir/tests/test_rowmajor.cpp.s
 .PHONY : tests/test_rowmajor.cpp.s
 
+tests/test_tensor.o: tests/test_tensor.cpp.o
+.PHONY : tests/test_tensor.o
+
+# target to build an object file
+tests/test_tensor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tensor.dir/build.make CMakeFiles/test_tensor.dir/tests/test_tensor.cpp.o
+.PHONY : tests/test_tensor.cpp.o
+
+tests/test_tensor.i: tests/test_tensor.cpp.i
+.PHONY : tests/test_tensor.i
+
+# target to preprocess a source file
+tests/test_tensor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tensor.dir/build.make CMakeFiles/test_tensor.dir/tests/test_tensor.cpp.i
+.PHONY : tests/test_tensor.cpp.i
+
+tests/test_tensor.s: tests/test_tensor.cpp.s
+.PHONY : tests/test_tensor.s
+
+# target to generate assembly for a file
+tests/test_tensor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tensor.dir/build.make CMakeFiles/test_tensor.dir/tests/test_tensor.cpp.s
+.PHONY : tests/test_tensor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -665,18 +726,25 @@ help:
 	@echo "... matrix"
 	@echo "... test_matrix"
 	@echo "... test_rowmajor"
+	@echo "... test_tensor"
 	@echo "... src/matrix.o"
 	@echo "... src/matrix.i"
 	@echo "... src/matrix.s"
 	@echo "... src/rowmajor.o"
 	@echo "... src/rowmajor.i"
 	@echo "... src/rowmajor.s"
+	@echo "... src/tensor.o"
+	@echo "... src/tensor.i"
+	@echo "... src/tensor.s"
 	@echo "... tests/test_matrix.o"
 	@echo "... tests/test_matrix.i"
 	@echo "... tests/test_matrix.s"
 	@echo "... tests/test_rowmajor.o"
 	@echo "... tests/test_rowmajor.i"
 	@echo "... tests/test_rowmajor.s"
+	@echo "... tests/test_tensor.o"
+	@echo "... tests/test_tensor.i"
+	@echo "... tests/test_tensor.s"
 .PHONY : help
 
 

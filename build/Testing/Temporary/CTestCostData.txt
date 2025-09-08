@@ -1,19 +1,32 @@
-Matrix at() allows modifying entries 3 0.00170578
-Matrix single row (1x4) 3 0.00168998
-Matrix multiply with identity 3 0.00131111
-Matrix at() throws on out-of-range indices 3 0.00125443
-Matrix rectangular construction - 3x2 3 0.00134026
-MatrixCalculator rejects incompatible shapes 3 0.00106543
-Matrix single column (4x1) 3 0.000951724
-Matrix basic construction 3 0.00127245
-Matrix multiply: 2x3 * 3x2 (normal A*B) 3 0.00159205
-Matrix multiply: 1xN · Nx1 gives 1x1 (dot product) 3 0.00131941
-Matrix multiply with zeros 3 0.00183408
-Matrix chanigng entry 3 0.0011837
-Matrix rectangular construction - 2x3 3 0.0012405
-RowMajorLayout: rank mismatch throws 3 0.00118947
-RowMajorLayout: 1D degenerate case 3 0.00114343
-RowMajorLayout: 2D mapping 3 0.00101704
-RowMajorLayout: larger dims sanity check 3 0.00130091
-RowMajorLayout: stride construction for 3D 3 0.00115579
+Matrix at() allows modifying entries 10 0.00038602
+Matrix single row (1x4) 10 0.000329889
+Matrix multiply with identity 10 0.000447526
+Matrix at() throws on out-of-range indices 10 0.000346087
+Matrix rectangular construction - 3x2 10 0.000404003
+MatrixCalculator rejects incompatible shapes 10 0.000421673
+Matrix single column (4x1) 10 0.000427481
+Matrix basic construction 10 0.000331786
+Matrix multiply: 2x3 * 3x2 (normal A*B) 10 0.000402159
+Matrix multiply: 1xN · Nx1 gives 1x1 (dot product) 10 0.000440896
+Matrix multiply with zeros 10 0.000363883
+Matrix chanigng entry 10 0.000327505
+Matrix rectangular construction - 2x3 10 0.000411052
+RowMajorLayout: rank mismatch throws 10 0.000321025
+RowMajorLayout: 1D degenerate case 10 0.000353225
+RowMajorLayout: 2D mapping 10 0.00048227
+RowMajorLayout: larger dims sanity check 10 0.000301649
+RowMajorLayout: stride construction for 3D 10 0.000505341
+Tensor out-of-range coordinate throws 3 0.00187053
+Tensor element access with at() 7 0.000555069
+Tensor construction and shape check 7 0.00052914
+Tensor throws on mismatched size 7 0.000684857
+Tensor construction and shape check - bigger dimensions 7 0.000585741
+at() multiple writes are reflected correctly 1 0.00336321
+at() sequential row-major traversal equals flat order 1 0.00550871
+at() const overload returns const ref (read-only) 1 0.00331158
+at() row-major mapping on 3D 1 0.00292934
+at() stress small grid: all coordinates valid, neighbors distinct 1 0.00363821
+at() boundary indices on 1D and 2D 1 0.00335277
+at() end-to-end: fill via at() then verify 1 0.00549438
+at() rank mismatch and index OOB 1 0.00327794
 ---

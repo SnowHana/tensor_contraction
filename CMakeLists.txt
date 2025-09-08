@@ -25,6 +25,7 @@ find_package(Catch2 3 REQUIRED)
 add_library(matrix
     src/matrix.cpp
     src/rowmajor.cpp
+    src/tensor.cpp
 )
 target_include_directories(matrix PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
@@ -45,3 +46,9 @@ add_executable(test_rowmajor tests/test_rowmajor.cpp)
 target_link_libraries(test_rowmajor PRIVATE matrix Catch2::Catch2WithMain)
 target_include_directories(test_rowmajor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 catch_discover_tests(test_rowmajor)
+
+# Test: tensor
+add_executable(test_tensor tests/test_tensor.cpp)
+target_link_libraries(test_tensor PRIVATE matrix Catch2::Catch2WithMain)
+target_include_directories(test_tensor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+catch_discover_tests(test_tensor)

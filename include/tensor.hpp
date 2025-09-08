@@ -11,8 +11,6 @@ class Tensor {
         Tensor(std::vector<std::size_t> dimensions, std::vector<int> flat);
 
         // Setter
-        // int& at(std::vector<std::size_t>);
-        // void set_data(std::size_t, int);
         int& at(const std::vector<std::size_t>& coord);
         
 
@@ -20,8 +18,6 @@ class Tensor {
         const int& at(const std::vector<std::size_t>& coord) const;
         const std::vector<std::size_t>& dims() const;
         const RowMajorLayout& rowMajor() const;
-        // const std::vector<int>& data() const noexcept;
-        // int data(std::size_t) const;
 
     private:
         // dims_ = vector of dimension
@@ -31,7 +27,7 @@ class Tensor {
         // flat data
         std::vector<int> data_{};
 
-    
+        // RowMajorLayout : Handles (x1, x2, x3 ... ) => i (1D index)
         RowMajorLayout rowMajor_;
 };
 
