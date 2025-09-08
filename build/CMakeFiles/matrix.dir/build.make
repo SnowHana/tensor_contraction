@@ -100,19 +100,35 @@ CMakeFiles/matrix.dir/src/rowmajor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/matrix.dir/src/rowmajor.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/cpp_projects/tensor_multiplier/src/rowmajor.cpp -o CMakeFiles/matrix.dir/src/rowmajor.cpp.s
 
+CMakeFiles/matrix.dir/src/tensor.cpp.o: CMakeFiles/matrix.dir/flags.make
+CMakeFiles/matrix.dir/src/tensor.cpp.o: /home/daniel/cpp_projects/tensor_multiplier/src/tensor.cpp
+CMakeFiles/matrix.dir/src/tensor.cpp.o: CMakeFiles/matrix.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/matrix.dir/src/tensor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/matrix.dir/src/tensor.cpp.o -MF CMakeFiles/matrix.dir/src/tensor.cpp.o.d -o CMakeFiles/matrix.dir/src/tensor.cpp.o -c /home/daniel/cpp_projects/tensor_multiplier/src/tensor.cpp
+
+CMakeFiles/matrix.dir/src/tensor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/matrix.dir/src/tensor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daniel/cpp_projects/tensor_multiplier/src/tensor.cpp > CMakeFiles/matrix.dir/src/tensor.cpp.i
+
+CMakeFiles/matrix.dir/src/tensor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/matrix.dir/src/tensor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daniel/cpp_projects/tensor_multiplier/src/tensor.cpp -o CMakeFiles/matrix.dir/src/tensor.cpp.s
+
 # Object files for target matrix
 matrix_OBJECTS = \
 "CMakeFiles/matrix.dir/src/matrix.cpp.o" \
-"CMakeFiles/matrix.dir/src/rowmajor.cpp.o"
+"CMakeFiles/matrix.dir/src/rowmajor.cpp.o" \
+"CMakeFiles/matrix.dir/src/tensor.cpp.o"
 
 # External object files for target matrix
 matrix_EXTERNAL_OBJECTS =
 
 libmatrix.a: CMakeFiles/matrix.dir/src/matrix.cpp.o
 libmatrix.a: CMakeFiles/matrix.dir/src/rowmajor.cpp.o
+libmatrix.a: CMakeFiles/matrix.dir/src/tensor.cpp.o
 libmatrix.a: CMakeFiles/matrix.dir/build.make
 libmatrix.a: CMakeFiles/matrix.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libmatrix.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/daniel/cpp_projects/tensor_multiplier/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libmatrix.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/matrix.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/matrix.dir/link.txt --verbose=$(VERBOSE)
 
