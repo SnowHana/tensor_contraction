@@ -30,14 +30,3 @@ class Tensor {
         // RowMajorLayout : Handles (x1, x2, x3 ... ) => i (1D index)
         RowMajorLayout rowMajor_;
 };
-
-class TensorContraction {
-    public:
-        TensorContraction(const Tensor& m1, const Tensor& m2);
-        const Tensor& A() const;
-        const Tensor& B() const;
-        Tensor contraction() const;
-    private:
-        const Tensor* A_{nullptr};
-        const Tensor* B_{nullptr};
-};
