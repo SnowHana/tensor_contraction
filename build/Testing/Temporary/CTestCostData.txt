@@ -1,32 +1,38 @@
-Matrix at() allows modifying entries 10 0.00038602
-Matrix single row (1x4) 10 0.000329889
-Matrix multiply with identity 10 0.000447526
-Matrix at() throws on out-of-range indices 10 0.000346087
-Matrix rectangular construction - 3x2 10 0.000404003
-MatrixCalculator rejects incompatible shapes 10 0.000421673
-Matrix single column (4x1) 10 0.000427481
-Matrix basic construction 10 0.000331786
-Matrix multiply: 2x3 * 3x2 (normal A*B) 10 0.000402159
-Matrix multiply: 1xN · Nx1 gives 1x1 (dot product) 10 0.000440896
-Matrix multiply with zeros 10 0.000363883
-Matrix chanigng entry 10 0.000327505
-Matrix rectangular construction - 2x3 10 0.000411052
-RowMajorLayout: rank mismatch throws 10 0.000321025
-RowMajorLayout: 1D degenerate case 10 0.000353225
-RowMajorLayout: 2D mapping 10 0.00048227
-RowMajorLayout: larger dims sanity check 10 0.000301649
-RowMajorLayout: stride construction for 3D 10 0.000505341
-Tensor out-of-range coordinate throws 3 0.00187053
-Tensor element access with at() 7 0.000555069
-Tensor construction and shape check 7 0.00052914
-Tensor throws on mismatched size 7 0.000684857
-Tensor construction and shape check - bigger dimensions 7 0.000585741
-at() multiple writes are reflected correctly 1 0.00336321
-at() sequential row-major traversal equals flat order 1 0.00550871
-at() const overload returns const ref (read-only) 1 0.00331158
-at() row-major mapping on 3D 1 0.00292934
-at() stress small grid: all coordinates valid, neighbors distinct 1 0.00363821
-at() boundary indices on 1D and 2D 1 0.00335277
-at() end-to-end: fill via at() then verify 1 0.00549438
-at() rank mismatch and index OOB 1 0.00327794
+Matrix at() allows modifying entries 11 0.000648694
+Matrix single row (1x4) 11 0.000460261
+Matrix multiply with identity 11 0.000576993
+Matrix at() throws on out-of-range indices 11 0.000551396
+Matrix rectangular construction - 3x2 11 0.000570559
+MatrixCalculator rejects incompatible shapes 11 0.000658307
+Matrix single column (4x1) 11 0.000683229
+Matrix basic construction 11 0.000617904
+Matrix multiply: 2x3 * 3x2 (normal A*B) 11 0.000577222
+Matrix multiply: 1xN · Nx1 gives 1x1 (dot product) 11 0.000489483
+Matrix multiply with zeros 11 0.000505599
+Matrix chanigng entry 11 0.000527573
+Matrix rectangular construction - 2x3 11 0.000483182
+RowMajorLayout: rank mismatch throws 11 0.000710717
+RowMajorLayout: 1D degenerate case 11 0.000502289
+RowMajorLayout: 2D mapping 11 0.00059963
+RowMajorLayout: larger dims sanity check 11 0.000788632
+RowMajorLayout: stride construction for 3D 11 0.000546247
+Tensor out-of-range coordinate throws 4 0.00165654
+Tensor element access with at() 8 0.000745701
+Tensor construction and shape check 8 0.000863672
+Tensor throws on mismatched size 8 0.000855011
+Tensor construction and shape check - bigger dimensions 8 0.000769631
+at() multiple writes are reflected correctly 2 0.00329737
+at() sequential row-major traversal equals flat order 2 0.00349579
+at() const overload returns const ref (read-only) 2 0.00371043
+at() row-major mapping on 3D 2 0.00337904
+at() stress small grid: all coordinates valid, neighbors distinct 2 0.00367414
+at() boundary indices on 1D and 2D 2 0.00385949
+at() end-to-end: fill via at() then verify 2 0.00266871
+at() rank mismatch and index OOB 2 0.00293447
+RowMajorLayout::toCoord larger dims sanity 1 0.00696872
+RowMajorLayout::toCoord out-of-range throws 1 0.00660474
+RowMajorLayout::toCoord roundtrip equals identity (3D) 1 0.00535403
+RowMajorLayout::toCoord basic 3D spot checks 1 0.00707203
+RowMajorLayout::toCoord 1D degenerates to identity of index 1 0.00609408
+RowMajorLayout::toCoord 2D inverse mapping 1 0.00586454
 ---
