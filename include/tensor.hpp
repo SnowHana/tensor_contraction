@@ -9,6 +9,7 @@ class Tensor {
     public:
         // Constructor
         Tensor(std::vector<std::size_t> dimensions, std::vector<int> flat);
+        Tensor(std::vector<std::size_t> dimensions);
 
         // Setter
         int& at(const std::vector<std::size_t>& coord);

@@ -64,6 +64,8 @@ Tensor TensorContraction::contract(std::optional<std::pair<size_t, size_t>> axes
 
 const std::vector<std::size_t>& TensorContraction::output_dims(std::pair<size_t, size_t> axis) const {
     // Calculate contracted Tensor's dimension - Assume axis are valid
+    // dA = x1 x2  ... k ... xn , dB = y1 y2  ... k ... ym 
+    // ==> out (result dim) = x1 x2 ... xn y1 y2 ... ym (both without k)
     const auto& dA = A().dims();
     const auto& dB = B().dims();
     
@@ -86,12 +88,32 @@ const std::vector<std::size_t>& TensorContraction::output_dims(std::pair<size_t,
 Tensor TensorContraction::contract_on_axis(std::pair<size_t, size_t> axis) const {
     
     // Actual calculation
+    // Assume : axis are valid
+
     auto& dims = output_dims(axis);
-
-
 
     const auto& dA = A().dims();
     const auto& dB = B().dims();
+
+    Tensor t = Tensor(dims);
+
+    // Iterate through flat vector
+    // Reconstruct n dim coorodinates
+    // First a - 1 => from A, next b - 1 => From B
+    
+
+    // I dont know what im doing here
+    // Filling single entry of C (output tensor)
+    // for (auto output_i : dims) {
+    //     for (size_t i = 0 ; i < output_i; ++i) {
+
+    //     }
+    // }
+    // for (size_t i = 0; i < dA.size(); ++i) {
+
+    // }
+
+
     for (size_t i = 0; i < dA.size(); ++i) {
         if (i != axis.first) {
             for (size_t j = 0; j < dB.size(); ++j) {

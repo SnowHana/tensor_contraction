@@ -17,6 +17,9 @@ class RowMajorLayout {
 
         // coordinates -> 1D index i
         size_t toFlat(const std::vector<std::size_t>&) const;
+
+        // 1D index i -> coordinates
+        const std::vector<std::size_t> toCoord(size_t i) const;
     private:
         // Attr.
         std::vector<std::size_t> dims_{};

@@ -39,6 +39,22 @@ size_t RowMajorLayout::toFlat(const std::vector<std::size_t>& coordinates) const
     return res;
 }
 
+const std::vector<std::size_t> RowMajorLayout::toCoord(size_t flat_i) const {
+    // Error check
+    if (flat_i >= size()) {
+        throw std::runtime_error("Flat index mismatch!");
+    }
+
+    std::vector<std::size_t> out;
+    out.resize(rank());
+    for (size_t i = 0 ; i < rank(); ++i) {
+        out[i] = flat_i / strides()[i];
+        flat_i %= strides()[i];
+    }
+
+    return out;
+}
+
 std::size_t RowMajorLayout::rank() const noexcept { return dims_.size(); }
 std::size_t RowMajorLayout::size() const noexcept { 
     std::size_t total = 1;
