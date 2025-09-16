@@ -89,38 +89,61 @@ Tensor TensorContraction::contract_on_axis(std::pair<size_t, size_t> axis) const
     
     // Actual calculation
     // Assume : axis are valid
-
+    
     auto& dims = output_dims(axis);
+    
+    // const auto& A = A();
+    // const auto& B = B();
 
+    const auto& tA = A();
+    const auto& tB = B();
     const auto& dA = A().dims();
     const auto& dB = B().dims();
+
+    if (dA[axis.first] != dB[axis.second]) {
+        throw std::invalid_argument("Contracted dimensions must match!");
+    }
+
+    const size_t concatN = dA[axis.first];
 
     Tensor t = Tensor(dims);
 
     // Iterate through flat vector
     // Reconstruct n dim coorodinates
     // First a - 1 => from A, next b - 1 => From B
-    
+    const auto& rowMajor = t.rowMajor();
+    std::vector<size_t> coordA(dA.size());
+    std::vector<size_t> coordB(dB.size());
 
-    // I dont know what im doing here
-    // Filling single entry of C (output tensor)
-    // for (auto output_i : dims) {
-    //     for (size_t i = 0 ; i < output_i; ++i) {
-
-    //     }
-    // }
-    // for (size_t i = 0; i < dA.size(); ++i) {
-
-    // }
-
-
-    for (size_t i = 0; i < dA.size(); ++i) {
-        if (i != axis.first) {
-            for (size_t j = 0; j < dB.size(); ++j) {
-                if (j != axis.second) {
-                    // Calculate single entry for result matrix
-                }
-            }
+    for (size_t i = 0; i < rowMajor.size(); ++i) {
+        const auto& coord = rowMajor.toCoord(i);
+        if (coord.size() != dims.size()) {
+            throw std::out_of_range("Coordinate dimension mismatch!");
         }
+
+        // Rebuild A coord
+        {   
+            std::copy_n(coord)
+
+            coordA(coord.begin() , coord.begin() + dA.size() - 1);
+            coordA.insert(coordA.begin() + axis.first, 0);
+        }
+
+
+        coordB(coord.begin() + dA.size() - 1, coord.end());
+        coordB.insert(coordB.begin() + axis.second, 0);
+
+
+        // auto& coordB(coord)
+        int total = 0;
+        for (size_t k = 0; k < concatN; ++k) {
+            coordA[axis.first] = k;
+            coordB[axis.second] = k;
+            total += (tA.at(coordA) * tB.at(coordB));
+        }
+
+        t.at(coord) = total;
     }
+
+    return t;
 }
