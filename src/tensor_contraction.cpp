@@ -95,58 +95,50 @@ Tensor TensorContraction::contract_on_axis(std::pair<size_t, size_t> axis) const
     // Actual calculation
     // Assume : axis are valid
     
+    // -------- Shapes ----------
     auto& dims = output_dims(axis);
-    
     const auto& tA = A();
     const auto& tB = B();
     const auto& dA = A().dims();
     const auto& dB = B().dims();
-
     if (dA[axis.first] != dB[axis.second]) {
         throw std::invalid_argument("Contracted dimensions must match!");
     }
-
     const size_t concatN = dA[axis.first];
     Tensor t = Tensor(dims);    // Contracted Tensor
     const auto& rowMajor = t.rowMajor();
 
     // 1. Decide if axis is from A or B
     std::vector<int> mapA, mapB;
-
-    mapA.resize(rowMajor.rank());
-    mapB.resize(rowMajor.rank());
-
-    for (size_t i = 0; i < dA.size(); ++i) {
-        if (i == axis.first) continue;
-        // from A
-        mapA.push_back(int(i));
-        mapB.push_back(-1);
-    }
-
-    for (size_t j = 0; j < dB.size(); ++j) {
-        if (j == axis.second) continue;
-        // from B
-        mapA.push_back(-1);
-        mapB.push_back(int(j));
+    mapA.reserve(rowMajor.rank());
+    mapB.reserve(rowMajor.rank());
+    {
+        for (size_t i = 0; i < dA.size(); ++i) {
+            if (i == axis.first) continue;
+            // from A
+            mapA.push_back(int(i));
+            mapB.push_back(-1);
+        }
+        for (size_t j = 0; j < dB.size(); ++j) {
+            if (j == axis.second) continue;
+            // from B
+            mapA.push_back(-1);
+            mapB.push_back(int(j));
+        }
     }
 
     // 2. Contrib
     std::vector<size_t> contribA, contribB;
     for (size_t i = 0; i < rowMajor.rank(); ++i) {
-        if (mapA[i] != -1) {
-            contribA[i] = tA.rowMajor().strides(size_t(mapA[i]));
-        }
-
-        if (mapB[i] != -1) {
-            contribB[i] = tB.rowMajor().strides(size_t(mapB[i]));
-        }
+        if (mapA[i] != -1) contribA[i] = tA.rowMajor().strides(size_t(mapA[i]));
+        if (mapB[i] != -1) contribB[i] = tB.rowMajor().strides(size_t(mapB[i]));
     }
 
-
+    // 3. Contraction 
     size_t baseA, baseB = 0;
     for (size_t i = 0; i < rowMajor.size(); ++i) {
         for (size_t k = 0; k < concatN; ++k) {
-            
+
         }
     }
 
