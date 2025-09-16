@@ -26,6 +26,8 @@ class TensorContraction {
         // Contraction calculation
         Tensor contract_on_axis(std::pair<size_t, size_t>) const;
 
+        // ------ Reconstruct Coordinates ----
+        std::vector<size_t> break_coordinates(std::vector<size_t>& coord, std::pair<size_t, size_t> axis);
 
 
 };

@@ -18,7 +18,7 @@ const std::vector<std::size_t>& RowMajorLayout::dims() const noexcept { return d
 const std::vector<std::size_t>& RowMajorLayout::strides() const noexcept { return strides_; }
 
 
-size_t RowMajorLayout::toFlat(const std::vector<std::size_t>& coordinates) const {
+const size_t RowMajorLayout::toFlat(const std::vector<std::size_t>& coordinates) const {
     // coordinates (x1, x2, x3 , ... xn) => i (Index in flat vector)
     
     // Error check : Mismatch dimension length (i.e. : N dimensional vs N - 1 dimensional)

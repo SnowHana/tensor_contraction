@@ -85,6 +85,11 @@ const std::vector<std::size_t>& TensorContraction::output_dims(std::pair<size_t,
     return out;
 }
 
+std::vector<size_t> TensorContraction::break_coordinates(std::vector<size_t>& coord, std::pair<size_t, size_t> axis) {
+    // Break (n - 1) * (m - 1) dimensional coord into (n) dim coord A, (m) dim coord B
+    return;
+}
+
 Tensor TensorContraction::contract_on_axis(std::pair<size_t, size_t> axis) const {
     
     // Actual calculation
@@ -92,9 +97,6 @@ Tensor TensorContraction::contract_on_axis(std::pair<size_t, size_t> axis) const
     
     auto& dims = output_dims(axis);
     
-    // const auto& A = A();
-    // const auto& B = B();
-
     const auto& tA = A();
     const auto& tB = B();
     const auto& dA = A().dims();
@@ -105,44 +107,47 @@ Tensor TensorContraction::contract_on_axis(std::pair<size_t, size_t> axis) const
     }
 
     const size_t concatN = dA[axis.first];
-
-    Tensor t = Tensor(dims);
-
-    // Iterate through flat vector
-    // Reconstruct n dim coorodinates
-    // First a - 1 => from A, next b - 1 => From B
+    Tensor t = Tensor(dims);    // Contracted Tensor
     const auto& rowMajor = t.rowMajor();
-    std::vector<size_t> coordA(dA.size());
-    std::vector<size_t> coordB(dB.size());
 
+    // 1. Decide if axis is from A or B
+    std::vector<int> mapA, mapB;
+
+    mapA.resize(rowMajor.rank());
+    mapB.resize(rowMajor.rank());
+
+    for (size_t i = 0; i < dA.size(); ++i) {
+        if (i == axis.first) continue;
+        // from A
+        mapA.push_back(int(i));
+        mapB.push_back(-1);
+    }
+
+    for (size_t j = 0; j < dB.size(); ++j) {
+        if (j == axis.second) continue;
+        // from B
+        mapA.push_back(-1);
+        mapB.push_back(int(j));
+    }
+
+    // 2. Contrib
+    std::vector<size_t> contribA, contribB;
+    for (size_t i = 0; i < rowMajor.rank(); ++i) {
+        if (mapA[i] != -1) {
+            contribA[i] = tA.rowMajor().strides(size_t(mapA[i]));
+        }
+
+        if (mapB[i] != -1) {
+            contribB[i] = tB.rowMajor().strides(size_t(mapB[i]));
+        }
+    }
+
+
+    size_t baseA, baseB = 0;
     for (size_t i = 0; i < rowMajor.size(); ++i) {
-        const auto& coord = rowMajor.toCoord(i);
-        if (coord.size() != dims.size()) {
-            throw std::out_of_range("Coordinate dimension mismatch!");
-        }
-
-        // Rebuild A coord
-        {   
-            std::copy_n(coord)
-
-            coordA(coord.begin() , coord.begin() + dA.size() - 1);
-            coordA.insert(coordA.begin() + axis.first, 0);
-        }
-
-
-        coordB(coord.begin() + dA.size() - 1, coord.end());
-        coordB.insert(coordB.begin() + axis.second, 0);
-
-
-        // auto& coordB(coord)
-        int total = 0;
         for (size_t k = 0; k < concatN; ++k) {
-            coordA[axis.first] = k;
-            coordB[axis.second] = k;
-            total += (tA.at(coordA) * tB.at(coordB));
+            
         }
-
-        t.at(coord) = total;
     }
 
     return t;
